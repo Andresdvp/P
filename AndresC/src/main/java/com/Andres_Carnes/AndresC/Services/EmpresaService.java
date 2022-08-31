@@ -9,18 +9,20 @@ public class EmpresaService {
 
     Empresa empresa1;
     Empresa empresa2;
-    private List<Empresa> empresaList;
+     List<Empresa> empresaList;
 
+     //constructor EmpresaService
     public EmpresaService() {
 
-        this.empresa1 = new Empresa(1, "AndresCarnes", "0000", "12345", "calle 40", new Date(), new Date());
-        this.empresa2 = new Empresa(1, "AndresCarnes2", "0000", "12345", "calle 40", new Date(), new Date());
+        this.empresa1 = new Empresa(1, "AndresCarnes", "0000", "12345", "calle 40", new Date(), new Date(),null);
+        this.empresa2 = new Empresa(1, "AndresCarnes2", "0000", "12345", "calle 40", new Date(), new Date(),null);
 
         empresaList = new ArrayList<>();
         empresaList.add(empresa1);
         empresaList.add(empresa2);
 
     }
+
 
     public List<Empresa> getEmpresaList() {
         return empresaList;

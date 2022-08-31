@@ -10,12 +10,19 @@ public class Employee {
     private String email;
     private Date updatedAt;
     private Date createdAt;
-    public Employee(long id,String name, String email, Date updatedAt, Date createdAt) {
+
+    //Instancia de la clase Movimiento para la relacion
+    private Movimiento transaccion ;
+
+    //constructor Employee
+    public Employee(long id,String name, String email, Date updatedAt, Date createdAt,Movimiento Tansaccion ) {
         this.id = id;
         this.name=name;
         this.email = email;
         this.updatedAt = updatedAt;
         this.createdAt = createdAt;
+
+        this.transaccion = transaccion;
     }
 
     public long getId() {
@@ -46,8 +53,11 @@ public class Employee {
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
 
+    //Geter y Seter de Movimiento = transaccion
+    public Movimiento getTransaccion() {return transaccion;}
+    public void setTransaccion(Movimiento transaccion) {this.transaccion = transaccion;}
 
-
+    /*
     //metodos
     //crear empleado
     public void createEmployee(long id,String name, String email, Date updatedAt, Date createdAt) {
@@ -67,5 +77,5 @@ public class Employee {
         this.createdAt = createdAt;
     }
 
-
+*/
 }

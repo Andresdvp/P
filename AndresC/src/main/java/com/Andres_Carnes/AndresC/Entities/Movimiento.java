@@ -12,6 +12,7 @@ public class Movimiento {
     private Date createAt;
     private Date updateAt;
 
+
     //Constructor de la class Movimiento financiero
     public Movimiento(long id, String concept, double amount, String user, Date createAt, Date updateAt) {
         this.id = id;
@@ -60,6 +61,12 @@ public class Movimiento {
         this.updateAt = updateAt;
     }
 
+
+
+
+
+    /*
+
     //Solicitar datos por consola para crear un movimiento financiero
     public static Movimiento crearMovimiento(){
         System.out.println("Ingrese el concepto del movimiento");
@@ -70,6 +77,10 @@ public class Movimiento {
         String user = System.console().readLine();
         return new Movimiento(0, concept, amount, user, new Date(), new Date());
     }
+
+
+
+
 
     //Metodo para imprimir los datos de un movimiento financiero
     public void imprimirMovimiento(){
@@ -90,7 +101,7 @@ public class Movimiento {
         return new Movimiento(0, concept, amount, user, new Date(), new Date());
     }
 
-
+*/
 
 
 

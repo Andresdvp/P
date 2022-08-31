@@ -5,10 +5,13 @@ package com.Andres_Carnes.AndresC.Entities;
 import javax.persistence.*;
 import java.util.Date;
 
+
+//Creacion de la tabla Empresa
 @Entity
 @Table(name="Empresa")
 public class Empresa {
     //atributos id long, name string, nit string, phone string, address string, createdAt date, updatedAt date
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -25,11 +28,14 @@ public class Empresa {
     @Column(name = "updatedAt")
     private Date updatedAt;
 
+    //Instancia de la clase Employee para la relacion
+    private Employee employee;
+
     //constructor tabla
     public Empresa() {}
 
     //constructor de la class Empresa
-    public Empresa(long id, String name, String nit, String phone, String address, Date createdAt, Date updatedAt) {
+    public Empresa(long id, String name, String nit, String phone, String address, Date createdAt, Date updatedAt,Employee employee) {
         this.id = id;
         this.name = name;
         this.nit = nit;
@@ -37,6 +43,7 @@ public class Empresa {
         this.address = address;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+        this.employee  = employee;
     }
 
     //getters y setters de la class Empresa
@@ -82,6 +89,11 @@ public class Empresa {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    //Geter y Seter de Employee
+    public Employee getEmployee() {return employee;}
+    public void setEmployee(Employee employee) {this.employee = employee;}
+/*
     //metodos
     //crear empresa
     public void createEmpresa(long id, String name, String nit, String phone, String address, Date createdAt, Date updatedAt) {
@@ -104,7 +116,7 @@ public class Empresa {
         this.updatedAt = updatedAt;
     }
 
-
+*/
 
 }
 

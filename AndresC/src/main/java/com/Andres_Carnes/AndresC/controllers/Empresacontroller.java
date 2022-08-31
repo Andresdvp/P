@@ -12,6 +12,7 @@ import java.util.List;
 public class Empresacontroller {
     EmpresaService service;
 
+    //constructor Empresacontroller
     public Empresacontroller() {
     this.service=new EmpresaService();
     }
